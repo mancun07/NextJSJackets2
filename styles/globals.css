@@ -1,0 +1,117 @@
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mainImage {
+  background: linear-gradient(rgba(0,0,0,0.5)), url('../public/main.jpg');
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 587px) {
+  .mainImage {
+    background: #000;
+  }
+}
+
+
+#root { height: 100% }
+html {
+  position: relative;
+  height: 100%;
+}
+body {
+  /* position: relative; */
+  height: 100%;
+}
+
+body {
+  background: #1b1b2a;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+.swiper-container {
+  position:absolute;
+  width: 100%;
+  height: 100vh;
+  /* top: 0;
+  left:0; */
+}
+
+.swiper-slide {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff; 
+
+  /* Center slide text vertically */
+ display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+} 
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+

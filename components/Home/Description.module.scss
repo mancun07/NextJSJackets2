@@ -1,0 +1,33 @@
+.about-us {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.about-us__desc {
+    grid-column: 1 /span 3;
+}
+
+.about-us__socials {
+    grid-column: 4 / span 2;
+}
+
+
+@media (max-width: 687px) {
+    .about-us {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-us__desc {
+        grid-column: 1 /span 1;
+    }
+
+    .about-us__socials {
+        grid-column: 1 /span 1;
+    }
+}

@@ -1,0 +1,22 @@
+.video-item {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.iframe {
+    max-width: 90%;
+}
+
+
+@media (max-width: 687px) {
+    .iframe {
+        height: 385px;
+    }
+}
+
+
+@media (max-width: 587px) {
+    .iframe {
+        height: 285px;
+    }
+}

@@ -1,0 +1,36 @@
+.member-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.member-item__photo {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 8px #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 1s all;
+    perspective: 1000px;
+    transform: rotateY(0deg);
+
+
+    &:hover {
+        cursor: pointer;
+        transform: rotateY(180deg);
+    }
+
+  
+}
+
+.member-item__name {
+    font-size: 1.25rem;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 687px) {
+    .member-item {
+        flex-direction: column;
+    } 
+}
