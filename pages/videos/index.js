@@ -8,7 +8,7 @@ const DummyVideos = [
       id: v4(),
       url:
         "https://youtu.be/0Wyx98yoe6c?enablejsapi=1&origin=http://localhost:3000",
-      title: "Era of Machines",
+      title: "Wake Up",
       date: "15/07/2022",
       venue: "Spring Drive - Wake up (Official music video)",
     },
