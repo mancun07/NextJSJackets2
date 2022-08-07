@@ -37,7 +37,7 @@ const MainNavigation = () => {
                     <li><Link href="/audio">АУДИО</Link></li>
                 </ul>
                 <ul className={classes.menu2}>
-                    <li><a href="https://vk.com/kkurtki" target="blank"><i className="fa fa-vk"></i></a></li>
+                    <li><a href="https://vk.com/springdriveband" target="blank"><i className="fa fa-vk"></i></a></li>
                     <li> <a href="https://www.youtube.com/channel/UCcUbnoi0qkje6LeWTYyEIcg" target="blank"><i className="fa fa-youtube"></i></a></li>
                 </ul>
             </nav>
@@ -56,7 +56,7 @@ const MainNavigation = () => {
             </ul>
      
             <ul className={classes.sidenav__nav__socials}>
-                <li><a href="https://vk.com/kkurtki" target="blank"><i className="fa fa-vk fa-2x"></i></a></li>
+                <li><a href="https://vk.com/springdriveband" target="blank"><i className="fa fa-vk fa-2x"></i></a></li>
                 <li> <a href="https://www.youtube.com/channel/UCcUbnoi0qkje6LeWTYyEIcg" target="blank"><i className="fa fa-youtube fa-2x"></i></a></li>
             </ul>
         </div>

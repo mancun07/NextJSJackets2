@@ -25,21 +25,15 @@ const socials = [
 
   {id: '2', 
   title: 'Сообщество группы в VK', 
-  pic: <i className="fa fa-vk" aria-hidden="true"></i>, href: 'https://vk.com/kkurtki',
+  pic: <i className="fa fa-vk" aria-hidden="true"></i>, href: 'https://vk.com/springdriveband',
   color: 'steelblue'
-  },
-  // {id: '3', 
-  // title: 'Сообщество группы в Instagram', 
-  // pic: <i className="fa fa-instagram" aria-hidden="true"></i>, href: 'https://www.instagram.com/music_jackets/',
-  // color: 'black'
-  // }
+  }
 ]
 
 const members = [
   {id: '1', title: 'Boris Britva - вокал, гитара', src: '/boris.jpg', direction: 'row-reverse'},
   {id: '2', title: 'Боярский Максим - ударные', src: '/maxim.jpg', direction: 'row'},
-  {id: '3', title: 'Музыченко Дмитрий - бас', src: '/dima.jpg', direction: 'row-reverse'},
-  // {id: '4', title: 'Андрей Лазук - клавишные', src: '/andrew.jpg', direction: 'row'}
+  {id: '3', title: 'Музыченко Дмитрий - бас', src: '/dima.jpg', direction: 'row-reverse'}
 ]
 
 
