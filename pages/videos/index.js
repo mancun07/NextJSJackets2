@@ -4,14 +4,7 @@ import { v4 } from "uuid";
 import Head from 'next/head'
 
 const DummyVideos = [
-    {
-      id: v4(),
-      url:
-        "https://youtu.be/0Wyx98yoe6c?enablejsapi=1&origin=http://localhost:3000",
-      title: "Wake Up",
-      date: "15/07/2022",
-      venue: "Spring Drive - Wake up (Official music video)",
-    },
+
     {
         id: v4(),
         url:
