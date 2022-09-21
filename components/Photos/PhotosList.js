@@ -41,7 +41,7 @@ const PhotosList = (props) => {
                 <Image
                 src={el.src} 
                 alt={el.title}
-                width="300" height="300"
+                width="400" height="300"
                 priority={true}
                 />
                 </motion.div>

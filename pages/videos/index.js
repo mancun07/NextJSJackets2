@@ -5,6 +5,22 @@ import Head from 'next/head'
 
 const DummyVideos = [
 
+  {
+    id: v4(),
+    url:
+      "https://www.youtube.com/embed/0Wyx98yoe6c",
+    title: "Wake Up",
+    date: "01/08/2022",
+    venue: "Fontanka Studio",
+  },
+    {
+      id: v4(),
+      url:
+        "https://www.youtube.com/embed/3IjclzwYGyg",
+      title: "Uuu (It looks like a flame)",
+      date: "11/09/2022",
+      venue: "Smolla Hall",
+    },
     {
         id: v4(),
         url:

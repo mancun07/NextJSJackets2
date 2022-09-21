@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import Backdrop2 from '../Layout/Backdrop2'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -41,13 +42,16 @@ export default function SwiperSlider(props) {
               
               {props.images.map(el => {
                   return (
-                  <SwiperSlide className="swiper-slide" key={el.id}>
+                    <Backdrop2 key={el.id}>
+                  <SwiperSlide className="swiper-slide" >
                     <Image src={el.src} alt={el.title} 
                     //  width="100vw" height="100vh"
                     layout="fill"
                     priority={true}
                     />
-                  </SwiperSlide> )
+                  </SwiperSlide> 
+                  </Backdrop2>
+                  )
               })}
       </Swiper>
     </Fragment>
