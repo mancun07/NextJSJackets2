@@ -24,7 +24,6 @@ const PhotosPage = () => {
             </Head>
             <div className="container">
                 <PhotosList photos={dummyPhotos}/>
-                111
             </div>
         </Fragment>
     )
