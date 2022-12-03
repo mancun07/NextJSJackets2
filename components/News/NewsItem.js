@@ -9,7 +9,15 @@ const NewsItem = ({el}) => {
 
     const goToSingleNewsHandler = () => {
         router.push('/news/' + el.id)
+        console.log('buttton is clicked')
     }
+
+    console.log(typeof(el.description))
+
+    const modifiedDate = new Date(el.date)
+    const day = modifiedDate.getDate() + 1;
+    const month = modifiedDate.getMonth() + 1;
+    const year = modifiedDate.getFullYear();
 
     return (
         <div className={classes.newsItem}>
@@ -20,9 +28,9 @@ const NewsItem = ({el}) => {
                   priority={true}
                   />
             </div>
-            <p>{el.date}</p>
+            <p>{day < 10 ? '0' : ''}{day}{'.'}{month < 10 ? '0' : ''}{month}{'.'}{year}</p>
             <h2>{el.title}</h2>
-            <p>{el.description}</p>
+            <p>{el.content}</p>
             <button className={classes.btn} onClick={goToSingleNewsHandler}>Читать далее</button>
         </div>
     )

@@ -5,18 +5,16 @@ import Head from 'next/head'
 
 
 
-const sortArray = (array) => {
-    return array.sort((a,b) => {
-        return a.date > b.date ? -1 : 1
-    })
-}
+// const sortArray = (array) => {
+//     return array.sort((a,b) => {
+//         return a.date > b.date ? -1 : 1
+//     })
+// }
 
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.op8yb.mongodb.net/JACKETS?retryWrites=true&w=majority`
 
 
 const NewsPage = (props) => {
-
-    console.log(props.news)
 
     useEffect(() => {
         document.querySelector('body').classList.add('mainImage');
@@ -27,7 +25,8 @@ const NewsPage = (props) => {
     }, [])
 
 
-    const sortedNews = sortArray(props.news)
+    // const sortedNews = sortArray(props.news)
+    const sortedNews = props.news
  
     return (
        <Fragment> 
@@ -42,27 +41,55 @@ const NewsPage = (props) => {
     )
 }
 
-export const getStaticProps = async () => {
+
+export const getStaticProps = async() => {
     const client = await MongoClient.connect(url);
     const db = client.db();
-    const articlesCollection = db.collection('articles')
+    const articlesCollection = db.collection('articles');
 
-    const articles = await articlesCollection.find().toArray();
+    const articles = await articlesCollection.find().sort({date: -1}).toArray();
+    console.log(articles)
+
     client.close();
 
     return {
         props: {
-            news: articles.map(el => ({
-                id: el._id.toString(),
-                image: el.image,
-                title: el.title,
-                description: el.content,
-                date: el.date
+            news: articles.map(item => ({
+                id: item._id.toString(),
+                image: item.image,
+                title: item.title,
+                content: item.content,
+                fullcontent: item.fullcontent,
+                date: Date.parse(item.date)
             }))
         },
         revalidate: 1000
     }
+
+
 }
+
+// export const getStaticProps = async () => {
+//     const client = await MongoClient.connect(url);
+//     const db = client.db();
+//     const articlesCollection = db.collection('articles')
+
+//     const articles = await articlesCollection.find().toArray();
+//     client.close();
+
+//     return {
+//         props: {
+//             news: articles.map(el => ({
+//                 id: el._id.toString(),
+//                 image: el.image,
+//                 title: el.title,
+//                 description: el.content,
+//                 date: el.date
+//             }))
+//         },
+//         revalidate: 1000
+//     }
+// }
 
 
 

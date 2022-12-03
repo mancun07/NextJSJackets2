@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     margin: 60px 0;
+    // perspective: 1000px;
 }
 
 .member-item__photo {
@@ -11,14 +12,14 @@
     box-shadow: 0 0 8px #fff;
     border-radius: 50%;
     overflow: hidden;
-    transition: 1s all;
-    perspective: 1000px;
-    transform: rotateY(0deg);
+    // transition: 1s all;
+    // perspective: 1000px;
+    // transform: rotateX(60deg);
 
 
     &:hover {
         cursor: pointer;
-        transform: rotateY(180deg);
+        // transform: rotateY(180deg);
     }
 
   

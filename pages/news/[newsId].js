@@ -6,6 +6,8 @@ import Head from 'next/head'
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.op8yb.mongodb.net/JACKETS?retryWrites=true&w=majority`
 
 const SingleNewsPage = (props) => {
+
+    console.log(props.singleNews)
     return (
         <Fragment>
             <Head>
@@ -57,8 +59,13 @@ export const getStaticProps = async (context) => {
                 id: selectedNews._id.toString(),
                 title: selectedNews.title,
                 image: selectedNews.image,
-                description: selectedNews.content,
-                date: selectedNews.date,
+                content: selectedNews.content,
+                fullcontent: selectedNews.fullcontent,
+                audioisrequired: selectedNews.audioisrequired,
+                audiotitle: selectedNews.audiotitle,
+                videoisrequired: selectedNews.videoisrequired,
+                videolink: selectedNews.videolink,
+                date: Date.parse(selectedNews.date),
             }
         }
     }
