@@ -54,6 +54,8 @@ let video = null;
         
     }
 
+    console.log(video)
+
 
     return (
         <div className={classes.singleNews}>
