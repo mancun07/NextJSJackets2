@@ -17,7 +17,7 @@ const NewsDetails = (props) => {
 
 
 // добавляем аудио, если требуется
-    let audio;
+    let audio = null;
 
     if(props.singleNews.audioisrequired) {
         audio = 
@@ -38,7 +38,7 @@ const NewsDetails = (props) => {
 
 // добавляем видео, если требуется
 
-let video;
+let video = null;
 
     if(props.singleNews.videoisrequired) {
         video = 
