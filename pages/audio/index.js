@@ -5,19 +5,19 @@ import Head from 'next/head'
 
 const DummyAudios = [
     {
-        id: v4(), src: '/Move.jpg', mp3:'./Move.mp3', title: 'Move (Leather Jackets)'
+        id: v4(), src: '/Move.jpg', mp3:'./Move.mp3', title: 'Move (Spring Drive)'
     },
     {
-        id: v4(), src: '/Right.jpg', mp3:'./Right.mp3', title: 'Right (Leather Jackets)'
+        id: v4(), src: '/Right.jpg', mp3:'./Right.mp3', title: 'Right (Spring Drive)'
     },
     {
-        id: v4(), src: '/Annie.jpg', mp3:'./Annie.mp3', title: 'Annie (Leather Jackets)'
+        id: v4(), src: '/Annie.jpg', mp3:'./Annie.mp3', title: 'Annie (Spring Drive)'
     },
     {
-        id: v4(), src: '/It_was_you.jpg', mp3:'./It_was_you.mp3', title: 'It was you (Leather Jackets)'
+        id: v4(), src: '/It_was_you.jpg', mp3:'./It_was_you.mp3', title: 'It was you (Spring Drive)'
     },
     {
-        id: v4(), src: '/Slave.jpg', mp3:'./Slave.mp3', title: 'Slave (Leather Jackets)'
+        id: v4(), src: '/Slave.jpg', mp3:'./Slave.mp3', title: 'Slave (Spring Drive)'
     },
 
 ]
