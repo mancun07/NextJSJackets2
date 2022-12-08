@@ -7,7 +7,7 @@ const handler = async(req, res) => {
         const client = await MongoClient.connect(url);
         const db = client.db();
         const articlesCollection = db.collection('articles');
-        console.log(req);
+        // console.log(req);
        
 
         const newObj = {
@@ -26,6 +26,7 @@ const handler = async(req, res) => {
 
     }
 }
+
 
 export default handler;
 

@@ -3,7 +3,7 @@ import VideoList from '../../components/Videos/VideoList'
 import { v4 } from "uuid";
 import Head from 'next/head'
 
-const DummyVideos = [
+const bandVideos = [
 
   {
     id: v4(),
@@ -63,7 +63,7 @@ const VideosPage = () => {
             <meta name="description" content="Video Page" />
         </Head>
         <div className="container">
-            <VideoList videos={DummyVideos}/>
+            <VideoList videos={bandVideos}/>
         </div>
       </Fragment>
     )

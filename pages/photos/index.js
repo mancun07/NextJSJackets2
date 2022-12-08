@@ -3,7 +3,7 @@ import PhotosList from '../../components/Photos/PhotosList'
 import { v4 } from "uuid";
 import Head from 'next/head'
 
-const dummyPhotos = [
+const bandPhotos = [
     {id: v4(), title: 'Band Photo1', src:'/about1.jpg'},
     {id: v4(), title: 'Band Photo2', src:'/about2.jpg'},
     {id: v4(), title: 'Band Photo3', src:'/about3.jpg'},
@@ -23,7 +23,7 @@ const PhotosPage = () => {
                 <meta name="description" content="Photos Page" />
             </Head>
             <div className="container">
-                <PhotosList photos={dummyPhotos}/>
+                <PhotosList photos={bandPhotos}/>
             </div>
         </Fragment>
     )

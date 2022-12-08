@@ -12,7 +12,8 @@
     }
 
     img {
-        transform: skew(5deg) scale(1.1);
+        object-fit: cover;
+        transform: skew(-5deg) scale(1.1);
         &:hover {
             cursor: pointer;
         }

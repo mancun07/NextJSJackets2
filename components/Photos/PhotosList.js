@@ -35,13 +35,13 @@ const PhotosList = (props) => {
                 whileHover={{
                     scale: 1.1,
                     rotateZ: 5,
-                    boxShadow: "0px 0px 8px rgb(255,255,255)"  
+                    // boxShadow: "0px 0px 8px rgb(255,255,255)"  
                 }}
                 >
                 <Image
                 src={el.src} 
                 alt={el.title}
-                width="400" height="300"
+                width="350" height="300"
                 priority={true}
                 />
                 </motion.div>
