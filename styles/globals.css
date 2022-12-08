@@ -37,7 +37,8 @@ img {
 }
 
 .mainImage {
-  background: linear-gradient(rgba(0,0,0,0.5)), url('../public/main.jpg');
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../public/main.jpg');
+  /* background: linear-gradient(rgba(0,0,0,0.5)), url('../public/main.jpg'); */
   background-position: top center;
   background-attachment: fixed;
   background-size: cover;
