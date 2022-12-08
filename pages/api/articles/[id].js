@@ -3,6 +3,8 @@ import { MongoClient, ObjectId } from "mongodb";
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.op8yb.mongodb.net/JACKETS?retryWrites=true&w=majority`
 
 const handler = async (req, res) => {
+
+    //API для удаления новостей
     if(req.method === 'DELETE') {
         const client = await MongoClient.connect(url);
         const db = client.db();
@@ -14,19 +16,15 @@ const handler = async (req, res) => {
         client.close();
     }
 
+    // API для обновления новостей
     if (req.method === 'PATCH') {
         const client = await MongoClient.connect(url);
         const db = client.db();
-        const articlesCollection = db.collection('articles2');
+        const articlesCollection = db.collection('articles');
 
-        const newObj = {
-            title: req.body.title,
-            content: req.body.content,
-            image: req.body.image,
-            date: req.body.date
-        }
+        const newObj = req.body;
 
-        const updatedArticle = await articlesCollection.updateOne({_id: ObjectId('6389b78c85599ca493ec3c83')}, 
+        const updatedArticle = await articlesCollection.updateOne({_id: ObjectId(req.query.id)}, 
         {$set: newObj})
 
         res.status(200).json(updatedArticle);

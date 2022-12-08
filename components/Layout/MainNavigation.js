@@ -30,8 +30,8 @@ const MainNavigation = () => {
             <div className={classes.logo}>Spring Drive</div>
             <nav className={classes.navbar}>
                 <ul className={classes.menu1}>
-                    <li><Link href="/">ГЛАВНАЯ</Link></li>
-                    <li><Link href={'/news'}>НОВОСТИ</Link></li>
+                    <li><Link href={'/'}>НОВОСТИ</Link></li>
+                    <li><Link href="/home">О ГРУППЕ</Link></li>
                     <li><Link href="/photos">ФОТО</Link></li>
                     <li><Link href="/videos">ВИДЕО</Link></li>
                     <li><Link href="/audio">АУДИО</Link></li>
@@ -48,8 +48,8 @@ const MainNavigation = () => {
         <div className={`${classes.sidenav} ${mobileMenuIsShown && classes[`sidenav-is-active`]}`}> 
             <div className={classes.close} onClick={toggleMenu}>X</div>
             <ul className={classes.sidenav__nav__menu}>
-                <li onClick={toggleMenu}><Link href={'/'}><a>ГЛАВНАЯ</a></Link></li>
-                <li onClick={toggleMenu}><Link href={'/news'}>НОВОСТИ</Link></li>
+                <li onClick={toggleMenu}><Link href={'/'}>НОВОСТИ</Link></li>
+                <li onClick={toggleMenu}><Link href={'/home'}><a>О ГРУППЕ</a></Link></li>
                 <li onClick={toggleMenu}><Link href={'/photos'}>ФОТО</Link></li>
                 <li onClick={toggleMenu}><Link href={'/videos'}>ВИДЕО</Link></li>
                 <li onClick={toggleMenu}><Link href={'/audio'}>АУДИО</Link></li>

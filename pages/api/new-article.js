@@ -21,7 +21,7 @@ const handler = async(req, res) => {
         }
 
         const newArticle = await articlesCollection.insertOne(newObj);
-        res.status(200).json("Success");
+        res.status(201).json("Success");
         client.close();
 
     }

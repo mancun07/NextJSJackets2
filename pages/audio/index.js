@@ -5,6 +5,12 @@ import Head from 'next/head'
 
 const DummyAudios = [
     {
+        id: v4(), src: '/Move.jpg', mp3:'./Move.mp3', title: 'Move (Leather Jackets)'
+    },
+    {
+        id: v4(), src: '/Right.jpg', mp3:'./Right.mp3', title: 'Right (Leather Jackets)'
+    },
+    {
         id: v4(), src: '/Annie.jpg', mp3:'./Annie.mp3', title: 'Annie (Leather Jackets)'
     },
     {
