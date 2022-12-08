@@ -105,6 +105,13 @@ body {
 }
 
 
+@media (max-width: 687px) {
+  .swiper-container {
+    height: 50vh;
+  }
+}
+
+
 
 
 
