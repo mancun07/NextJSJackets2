@@ -10,7 +10,7 @@ const VideoItem = ({el}) => {
             <p>{el.venue}</p>
                 <iframe className={classes.iframe} 
                 src={el.url} 
-                frameBorder="0"
+                // frameBorder="0"
                 width="789"
                 height="444"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
