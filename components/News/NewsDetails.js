@@ -44,7 +44,6 @@ let video = null;
         video = 
         <iframe className={classes.iframe} 
                 src={props.singleNews.videolink} 
-                frameBorder="0"
                 width="789"
                 height="444"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -53,8 +52,6 @@ let video = null;
         </iframe>
         
     }
-
-    console.log(video)
 
 
     return (

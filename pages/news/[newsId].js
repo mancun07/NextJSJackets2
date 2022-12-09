@@ -7,7 +7,6 @@ const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 const SingleNewsPage = (props) => {
 
-    console.log(typeof(props.singleNews.audioisrequired))
     return (
         <Fragment>
             <Head>
