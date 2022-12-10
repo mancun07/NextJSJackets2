@@ -41,7 +41,7 @@ export const getStaticProps = async() => {
     const articlesCollection = db.collection('articles');
 
     const articles = await articlesCollection
-    .find()
+    .find({limit: 9})
     .sort({date: -1})
     .toArray();
 
