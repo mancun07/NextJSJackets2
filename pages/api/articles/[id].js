@@ -4,7 +4,7 @@ const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 const handler = async (req, res) => {
 
-    //API для удаления новостей
+    //API для удаления новостей (DELETE запрос)
     if(req.method === 'DELETE') {
         const client = await MongoClient.connect(url);
         const db = client.db();
@@ -16,7 +16,7 @@ const handler = async (req, res) => {
         client.close();
     }
 
-    // API для обновления новостей
+    // API для обновления новостей (PATCH запрос)
     if (req.method === 'PATCH') {
         const client = await MongoClient.connect(url);
         const db = client.db();
