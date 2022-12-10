@@ -9,10 +9,8 @@ const NewsItem = ({el}) => {
 
     const goToSingleNewsHandler = () => {
         router.push('/news/' + el.id)
-        console.log('buttton is clicked')
     }
 
-    console.log(typeof(el.description))
 
     const modifiedDate = new Date(el.date)
     const day = modifiedDate.getDate() + 1;

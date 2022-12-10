@@ -60,7 +60,7 @@ const VideosPage = () => {
       <Fragment>
         <Head>
             <title>Video Page</title>
-            <meta name="description" content="Video Page" />
+            <meta name="description" content="Videos of the band Spring Drive" />
         </Head>
         <div className="container">
             <VideoList videos={bandVideos}/>
