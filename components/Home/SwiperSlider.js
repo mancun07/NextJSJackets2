@@ -30,6 +30,7 @@ export default function SwiperSlider(props) {
     <Fragment>
       <Swiper className="swiper-container mySwiper" 
               spaceBetween={30} 
+              loop={true}
               centeredSlides={true}  
               pagination={{
             "clickable": true
@@ -42,15 +43,13 @@ export default function SwiperSlider(props) {
               
               {props.images.map(el => {
                   return (
-                    <Backdrop2 key={el.id}>
-                  <SwiperSlide className="swiper-slide" >
+                  <SwiperSlide className="swiper-slide" key={el.id}>
                     <Image src={el.src} alt={el.title} 
                     //  width="100vw" height="100vh"
                     layout="fill"
                     priority={true}
                     />
                   </SwiperSlide> 
-                  </Backdrop2>
                   )
               })}
       </Swiper>

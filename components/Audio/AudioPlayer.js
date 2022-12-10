@@ -1,4 +1,4 @@
-import React, {useRef, useState } from 'react'
+import React, {Fragment, useRef, useState } from 'react'
 import classes from './AudioPlayer.module.scss'
 import Image from 'next/image'
 import PropTypes from 'prop-types';
@@ -64,8 +64,6 @@ const AudioPlayer = (props) => {
                     <span onClick={handleNextSong}>Next</span>
                 </div>
 
-                <audio ref={audioRef} src={songRecord}></audio>
-
                 <div className={`${classes.disk} ${playState ? classes.diskIsActive : ''}`}>
                     <Image 
                         src={songImage} 
@@ -79,6 +77,8 @@ const AudioPlayer = (props) => {
 
                 <div className={`${classes.show} ${playState && classes.isActive}`}>{songName}</div>
             </div>
+            <audio className={classes.audio} ref={audioRef} src={songRecord} controls>
+            </audio>
         </div>
     )
 }
