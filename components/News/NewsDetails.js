@@ -59,7 +59,7 @@ let video = null;
             <Link href={'/news'}><a><button className={classes.btn}>Обратно к списку новостей</button></a></Link>
             <div>
                 <Image src={props.singleNews.image} alt={props.singleNews.title}
-                width="600px" height="300px" priority={true}
+                width="600px" height="300px" 
                 />
             </div>
             <p>{day < 10 ? '0' : ''}{day}{'.'}{month < 10 ? '0' : ''}{month}{'.'}{year}</p>
