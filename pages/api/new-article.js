@@ -7,6 +7,7 @@ const handler = async(req, res) => {
         const client = await MongoClient.connect(url);
         const db = client.db();
         const articlesCollection = db.collection('articles');
+        console.log(req.body)
         // console.log(req);
        
 
@@ -17,11 +18,13 @@ const handler = async(req, res) => {
             fullcontent: req.body.fullcontent,
             date: req.body.date,
             audioisrequired: req.body.audioisrequired,
-            audiotitle: req.body.audiotitle
+            audiotitle: req.body.audiotitle,
+            videoisrequired:req.body.videoisrequired,
+            videolink:req.body.videolink
         }
 
         const newArticle = await articlesCollection.insertOne(newObj);
-        res.status(201).json("Success");
+        res.status(201).json(newArticle);
         client.close();
 
     }
