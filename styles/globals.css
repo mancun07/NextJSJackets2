@@ -41,7 +41,6 @@ img {
 
 .mainImage {
   background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../public/main.jpg');
-  /* background: linear-gradient(rgba(0,0,0,0.5)), url('../public/main.jpg'); */
   background-position: top center;
   background-attachment: fixed;
   background-size: cover;
@@ -60,7 +59,6 @@ html {
   height: 100%;
 }
 body {
-  /* position: relative; */
   height: 100%;
 }
 
@@ -76,8 +74,6 @@ body {
   position:absolute;
   width: 100%;
   height: 100vh;
-  /* top: 0;
-  left:0; */
 }
 
 .swiper-slide {

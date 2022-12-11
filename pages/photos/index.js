@@ -19,7 +19,7 @@ const PhotosPage = () => {
     return (
         <Fragment>
             <Head>
-                <title>Photos Page</title>
+                <title>Фото / Группа Spring Drive</title>
                 <meta name="description" content="Photos Page" />
             </Head>
             <div className="container">

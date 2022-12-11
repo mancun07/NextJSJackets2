@@ -68,7 +68,7 @@ let video = null;
             <h2>{props.singleNews.title}</h2>
             <p>{props.singleNews.fullcontent}</p>
             <div>{audio && audio}</div>
-            <div>{video && video}</div>
+            <div className={classes.video}>{video && video}</div>
         </div>
     )
 }

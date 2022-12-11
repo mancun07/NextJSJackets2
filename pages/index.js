@@ -23,7 +23,7 @@ const NewsPage = (props) => {
     return (
        <Fragment> 
             <Head>
-                <title>News Page</title>
+                <title>Новости / Группа Spring Drive</title>
                 <meta name="description" content="News Page" />
             </Head>
             <div className="container">
@@ -65,27 +65,6 @@ export const getStaticProps = async() => {
 
 }
 
-// export const getStaticProps = async () => {
-//     const client = await MongoClient.connect(url);
-//     const db = client.db();
-//     const articlesCollection = db.collection('articles')
-
-//     const articles = await articlesCollection.find().toArray();
-//     client.close();
-
-//     return {
-//         props: {
-//             news: articles.map(el => ({
-//                 id: el._id.toString(),
-//                 image: el.image,
-//                 title: el.title,
-//                 description: el.content,
-//                 date: el.date
-//             }))
-//         },
-//         revalidate: 1000
-//     }
-// }
 
 
 

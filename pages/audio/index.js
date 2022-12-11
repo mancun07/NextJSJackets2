@@ -26,7 +26,7 @@ const AudioPage = () => {
     return (
         <Fragment>
             <Head>
-                <title>Audio Page</title>
+                <title>Аудио записи / Группа Spring Drive</title>
                 <meta name="description" content="Audio Page" />
             </Head>
             <div className="container">

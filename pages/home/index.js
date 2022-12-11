@@ -53,7 +53,7 @@ const HomePage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Home Page</title>
+        <title>О группе / Группа Spring Drive</title>
         <meta name="description" content="Home Page" />
       </Head>
       <SwiperSlider images={images}/>

@@ -50,11 +50,9 @@ const PhotosList = (props) => {
         </motion.div>
         {overlayOpen && ( 
             <Fragment>
-            {/* <div className={classes.backdrop}> */}
                 <Backdrop>
                     <span className={classes.close} onClick={closeOverlay}>X</span>
                 </Backdrop>
-            {/* </div> */}
             <div className={classes.modal}>
                 <Image src={imageSrc} alt={'band members'} width="200" height="200" aria-hidden="true"
                     layout="responsive"

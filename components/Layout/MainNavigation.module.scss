@@ -106,8 +106,6 @@
 
 
   .sidenav {
-    // height: 0;
-    // background: transparent;
     position: fixed;
     top: 0;
     left:0;
@@ -115,15 +113,9 @@
     display: none;
     width: 300px;
     height: 100vh;
-    // height: 100vh;
-    // transform: translate(-100vw);
-    // transition: transform 1s;
     line-height: 1.5;
     background: #333;
     font-size: 20px;
-    // opacity: 0;
-    // overflow: hidden;
-    // animation: slidemenu 0.2s ease-in-out;
     padding: 40px 30px 40px 30px;
 
 
@@ -139,9 +131,6 @@
   .sidenav-is-active {
     display: block;
     animation: slidemenu 0.2s ease-in-out;
-    // opacity: 1;
-
-    
   }
 
   @keyframes slidemenu {
@@ -153,12 +142,6 @@
     }
   }
 
-
-  
-
-  // .sidenav__nav__menu li {
-  //   display: block;
-  // }
 
   .sidenav__nav__menu a {
     display: block;

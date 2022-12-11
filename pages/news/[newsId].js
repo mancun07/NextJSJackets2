@@ -10,7 +10,7 @@ const SingleNewsPage = (props) => {
     return (
         <Fragment>
             <Head>
-                <title>Single News Page</title>
+                <title>Новости / Группа Spring Drive</title>
                 <meta name="description" content="Single News Page" />
             </Head>
             <div className="container">

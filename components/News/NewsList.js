@@ -11,11 +11,6 @@ const NewsList = (props) => {
                return <NewsItem key={el.id} el={el}/>
            })}            
         </div>
-        {/* <div>
-            <a className={classes.pageLink} href={'/news'}>1</a>
-            <a className={classes.pageLink} href={'/news?page=1'}>2</a>
-            <a className={classes.pageLink} href={'/news?page=2'}>3</a>
-        </div> */}
         </Fragment>
     )
 }
