@@ -57,7 +57,7 @@ const PhotosList = (props) => {
                 </Backdrop>
             {/* </div> */}
             <div className={classes.modal}>
-                <Image src={imageSrc} alt='band members' width="200" height="200"
+                <Image src={imageSrc} alt={'band members'} width="200" height="200" aria-hidden="true"
                     layout="responsive"
                     priority={true}
                     />
