@@ -43,7 +43,6 @@ const PhotosList = (props) => {
                 alt={el.title}
                 width="350" height="300"
                 priority={true}
-                placeholder={blur}
                 aria-hidden="true"
                 />
                 </motion.div>
