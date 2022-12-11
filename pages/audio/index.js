@@ -27,7 +27,7 @@ const AudioPage = () => {
         <Fragment>
             <Head>
                 <title>Аудио записи / Группа Spring Drive</title>
-                <meta name="description" content="Audio Page" />
+                <meta name="description" content="Официальный сайт рок-группы Spring Drive. Новости, концерты, фотоальбом, музыка и многое другое" />
             </Head>
             <div className="container">
                 <AudioPlayer audios={DummyAudios}/> 

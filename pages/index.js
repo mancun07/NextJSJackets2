@@ -24,7 +24,7 @@ const NewsPage = (props) => {
        <Fragment> 
             <Head>
                 <title>Новости / Группа Spring Drive</title>
-                <meta name="description" content="News Page" />
+                <meta name="description" content="Официальный сайт рок-группы Spring Drive. Новости, концерты, фотоальбом, музыка и многое другое" />
             </Head>
             <div className="container">
                 <NewsList news={props.news}/>

@@ -20,7 +20,7 @@ const PhotosPage = () => {
         <Fragment>
             <Head>
                 <title>Фото / Группа Spring Drive</title>
-                <meta name="description" content="Photos Page" />
+                <meta name="description" content="Официальный сайт рок-группы Spring Drive. Новости, концерты, фотоальбом, музыка и многое другое" />
             </Head>
             <div className="container">
                 <PhotosList photos={bandPhotos}/>

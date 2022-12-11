@@ -60,7 +60,7 @@ const VideosPage = () => {
       <Fragment>
         <Head>
             <title>Клипы / Группа Spring Drive</title>
-            <meta name="description" content="Videos of the band Spring Drive" />
+            <meta name="description" content="Официальный сайт рок-группы Spring Drive. Новости, концерты, фотоальбом, музыка и многое другое" />
         </Head>
         <div className="container">
             <VideoList videos={bandVideos}/>

@@ -54,7 +54,7 @@ const HomePage = () => {
     <Fragment>
       <Head>
         <title>О группе / Группа Spring Drive</title>
-        <meta name="description" content="Home Page" />
+        <meta name="description" content="Официальный сайт рок-группы Spring Drive. Новости, концерты, фотоальбом, музыка и многое другое" />
       </Head>
       <SwiperSlider images={images}/>
       <Description socials={socials}/>
