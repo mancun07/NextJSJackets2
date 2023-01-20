@@ -2,13 +2,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    max-width: 960px;
     margin: 130px auto 100px;
 
     div {
         transform: skew(-5deg);
-        
-
     }
 
     img {
@@ -22,27 +19,16 @@
 
 
 .modal {
-        position: fixed;
-        top:40px;
-        left:40px;
-        right:40px;
-        bottom:40px;
-        z-index: 300;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:600px;
+        max-width: 90%;
 
-    div {
-        width: 60vw;
-        height: 80vh;
-        animation: anim2 0.3s ease-in-out forwards;
-    }
-
-    img {
-        object-fit: contain;
-        
-        
-    }
+        img {
+            object-fit: contain;     
+        }
 }
 
 
@@ -61,12 +47,5 @@
         grid-template-columns: repeat(2, 1fr);
         margin-top:100px;
     }
-
-//     .imageContainer {
-//         div {
-//             width: 80vw;
-//             height: auto;
-//         }
-// }
 }
 

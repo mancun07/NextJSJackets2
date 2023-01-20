@@ -52,13 +52,13 @@ const PhotosList = (props) => {
             <Fragment>
                 <Backdrop>
                     <span className={classes.close} onClick={closeOverlay}>X</span>
+                    <div className={classes.modal}>
+                        <Image src={imageSrc} alt={'band members'} width="200" height="200" aria-hidden="true"
+                            layout="responsive"
+                            priority={true}
+                            />
+                    </div>
                 </Backdrop>
-            <div className={classes.modal}>
-                <Image src={imageSrc} alt={'band members'} width="200" height="200" aria-hidden="true"
-                    layout="responsive"
-                    priority={true}
-                    />
-            </div>
             </Fragment> )
             }
         </Fragment>

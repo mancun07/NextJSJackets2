@@ -1,5 +1,4 @@
 import React, {Fragment} from "react";
-import Backdrop2 from '../Layout/Backdrop2'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
