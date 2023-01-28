@@ -1,0 +1,95 @@
+
+// wrapper for all blocks
+.music-container {
+    margin-top: 200px;
+    width:600px;
+    max-width: 100%;
+    text-align: center;
+    padding:10px;
+    margin: 200px auto 100px;
+    position: relative;
+
+}
+
+.music-container.play .image-container {
+    animation-play-state: running;
+}
+
+.music-container.play .music-info {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+
+// block1
+.image-container {
+    height:90px;
+    position: absolute;
+    bottom: 30px;
+    left:30px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+// block2
+.navigation {
+    background-color: tomato;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    span {
+        cursor: pointer;
+    }
+
+}
+
+// block3
+.music-info {
+    background-color: #000;
+    color:#fff;
+    padding:20px;
+    border-radius: 10px;
+    transform: translateY(0);
+    transition: all 0.3s ease-in;
+    opacity: 0;
+
+    .music-title {
+        margin-bottom: 10px;
+    }
+
+    .progress-container {
+        background-color: #fff;
+        height: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+    
+        .progress {
+            height: 100%;
+            width: 50%;
+            background-color: tomato;
+            transition: width 0.1s linear;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
