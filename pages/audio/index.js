@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 import { v4 } from "uuid"
 import AudioPlayer from '../../components/Audio/AudioPlayer'
 import Head from 'next/head'
+import AudioPlayer2 from '../../components/Audio/AudioPlayer2'
 
 const DummyAudios = [
     {
@@ -30,7 +31,7 @@ const AudioPage = () => {
                 <meta name="description" content="Официальный сайт рок-группы Spring Drive. Новости, концерты, фотоальбом, музыка и многое другое" />
             </Head>
             <div className="container">
-                <AudioPlayer audios={DummyAudios}/> 
+                <AudioPlayer2 audios={DummyAudios}/> 
             </div>
         </Fragment>
     )

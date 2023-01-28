@@ -6,8 +6,9 @@ const AudioPlayer2 = (props) => {
 const [songIndex, setSongIndex] = useState(0);
 const [playState, setPlayState] = useState(false);
 const audio = useRef('');
+const progressBar = useRef('');
 
-
+// Запуск предыдущей песни
 const onPrevSongHandler = () => {
 
     if(songIndex > 0) {
@@ -19,6 +20,7 @@ const onPrevSongHandler = () => {
     playSong();
 }
 
+// Запуск следующей песни
 const onNextSongHandler = () => {
     if(songIndex < props.audios.length - 1) {
         setSongIndex(prevState => prevState + 1)
@@ -26,11 +28,7 @@ const onNextSongHandler = () => {
         setSongIndex(0)
     }
 
-    const timer = setTimeout(() => {
-        audio.current.play();
-    }, 100)
-
-    return () => clearTimeout(timer);
+    playSong();
 }
 
 const playSong = () => {
@@ -58,12 +56,31 @@ const onPlayHandler = () => {
     }
 }
 
+// update положения кастомного прогресс-бара
+const updateProgressBar = (e) => {
+    const {duration, currentTime} = e.target;
+    const percentage = (currentTime / duration) * 100; 
+
+    progressBar.current.style.width = `${percentage}%`;
+
+}
+
+const updateAudioTime = (e) => {
+
+    const width = e.target.clientWidth;
+    const clickX = e.nativeEvent.offsetX;
+    
+    audio.current.currentTime = (clickX / width) * audio.current.duration;
+}
+
+
+
   return (
     <div className={`${classes[`music-container`]} ${playState === true ? classes.play : ''}`}>
         <div className={classes[`music-info`]}>
             <div className={classes[`music-title`]}>{props.audios[songIndex].title}</div>
-            <div className={classes[`progress-container`]}>
-                <div className={classes[`progress`]}></div>
+            <div className={classes[`progress-container`]} onClick={updateAudioTime}>
+                <div ref={progressBar} className={classes[`progress`]}></div>
             </div>
         </div>
 
@@ -77,7 +94,7 @@ const onPlayHandler = () => {
             <span onClick={onNextSongHandler}>Next</span>
         </div>
 
-        <audio ref={audio} src={props.audios[songIndex].mp3}></audio>
+        <audio ref={audio} onTimeUpdate={updateProgressBar} onEnded={onNextSongHandler} src={props.audios[songIndex].mp3}></audio>
     </div>
   )
 }
