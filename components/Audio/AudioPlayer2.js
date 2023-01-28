@@ -37,14 +37,18 @@ const playSong = () => {
 
     const timer = setTimeout(() => {
         audio.current.play();
-    }, 100)
+    }, 1)
     
     return () => clearTimeout(timer);
 }
 
 const pauseSong = () => {
     setPlayState(false);
-    audio.current.pause();
+    const timer = setTimeout(() => {
+        audio.current.pause();
+    }, 1)
+    
+    return () => clearTimeout(timer);
 }
 
 const onPlayHandler = () => {
