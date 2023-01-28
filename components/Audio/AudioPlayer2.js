@@ -65,6 +65,8 @@ const updateProgressBar = (e) => {
 
 }
 
+
+// update момента песни, после того как двигаем кастомный прогресс-бар
 const updateAudioTime = (e) => {
 
     const width = e.target.clientWidth;
