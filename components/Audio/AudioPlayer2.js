@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react'
 import classes from './AudioPlayer2.module.scss'
+import Image from 'next/image'
 
 const AudioPlayer2 = (props) => {
 
@@ -87,7 +88,14 @@ const updateAudioTime = (e) => {
         </div>
 
         <div className={classes[`image-container`]}>
-            <img src={props.audios[songIndex].src} alt={props.audios[songIndex].title}/>
+            <Image 
+                src={props.audios[songIndex].src} 
+                alt="song poster" 
+                width="90" 
+                height="90"
+                layout="responsive"
+                priority={true}
+                />
         </div>
 
         <div className={classes.navigation}>
