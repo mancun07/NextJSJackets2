@@ -24,6 +24,7 @@
 // block1
 .image-container {
     height:90px;
+    width:90px;
     position: absolute;
     bottom: 30px;
     left:30px;
@@ -31,6 +32,10 @@
     overflow: hidden;
     animation: rotate 5s linear infinite;
     animation-play-state: paused;
+
+    div {
+        height: 100%;
+    }
 
     img {
         object-fit: cover;
@@ -62,7 +67,7 @@
     padding:20px;
     border-radius: 10px;
     transform: translateY(0);
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
     opacity: 0;
 
     .music-title {
