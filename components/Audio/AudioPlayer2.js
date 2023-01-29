@@ -25,7 +25,7 @@ useEffect(() => {
 
 // Запуск предыдущей песни
 const onPrevSongHandler = () => {
-    audio.pause();
+    audio.current.pause();
     if(songIndex > 0) {
         setSongIndex(prevState => prevState - 1)
     } else {
@@ -37,7 +37,7 @@ const onPrevSongHandler = () => {
 
 // Запуск следующей песни
 const onNextSongHandler = () => {
-    audio.pause();
+    audio.current.pause();
     if(songIndex < props.audios.length - 1) {
         setSongIndex(prevState => prevState + 1)
     } else {
