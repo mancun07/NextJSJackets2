@@ -18,13 +18,14 @@ useEffect(() => {
         firstLoading = false;
         return;
     }
+    console.log('hello from useEffect')
     playSong();
 
 }, [songIndex])
 
 // Запуск предыдущей песни
 const onPrevSongHandler = () => {
-
+    audio.pause();
     if(songIndex > 0) {
         setSongIndex(prevState => prevState - 1)
     } else {
@@ -36,6 +37,7 @@ const onPrevSongHandler = () => {
 
 // Запуск следующей песни
 const onNextSongHandler = () => {
+    audio.pause();
     if(songIndex < props.audios.length - 1) {
         setSongIndex(prevState => prevState + 1)
     } else {
