@@ -19,7 +19,12 @@ useEffect(() => {
         return;
     }
     console.log('hello from useEffect')
-    playSong();
+
+    let timer = setTimeout( function() {
+        playSong();
+    }, 1);
+   
+    return () => clearTimeout(timer);
 
 }, [songIndex])
 
