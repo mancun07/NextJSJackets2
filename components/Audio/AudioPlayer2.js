@@ -37,7 +37,7 @@ const playSong = () => {
 
     const timer = setTimeout(() => {
         audio.current.play();
-    }, 1)
+    }, 100)
     
     return () => clearTimeout(timer);
 }
@@ -46,7 +46,7 @@ const pauseSong = () => {
     setPlayState(false);
     const timer = setTimeout(() => {
         audio.current.pause();
-    }, 1)
+    }, 100)
     
     return () => clearTimeout(timer);
 }
