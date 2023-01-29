@@ -2,6 +2,9 @@ import React, {useEffect, useRef, useState} from 'react'
 import classes from './AudioPlayer2.module.scss'
 import Image from 'next/image'
 
+
+let firstLoading = true;
+
 const AudioPlayer2 = (props) => {
 
 const [songIndex, setSongIndex] = useState(0);
@@ -11,6 +14,10 @@ const progressBar = useRef('');
 
 useEffect(() => {
 
+    if(firstLoading) {
+        firstLoading = false;
+        return;
+    }
     playSong();
 
 }, [songIndex])
