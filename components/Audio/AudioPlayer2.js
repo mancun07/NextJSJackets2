@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import classes from './AudioPlayer2.module.scss'
 import Image from 'next/image'
 
@@ -8,6 +8,12 @@ const [songIndex, setSongIndex] = useState(0);
 const [playState, setPlayState] = useState(false);
 const audio = useRef('');
 const progressBar = useRef('');
+
+useEffect(() => {
+
+    audio.current.play();
+
+}, [songIndex])
 
 // Запуск предыдущей песни
 const onPrevSongHandler = () => {
@@ -35,20 +41,16 @@ const onNextSongHandler = () => {
 const playSong = () => {
     setPlayState(true);
 
-    const timer = setTimeout(() => {
-        audio.current.play();
-    }, 1000)
-    
-    return () => clearTimeout(timer);
+    audio.current.play();
+
+
 }
 
 const pauseSong = () => {
     setPlayState(false);
-    const timer = setTimeout(() => {
-        audio.current.pause();
-    }, 1000)
-    
-    return () => clearTimeout(timer);
+
+    audio.current.pause();
+
 }
 
 const onPlayHandler = () => {
