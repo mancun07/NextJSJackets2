@@ -11,7 +11,7 @@ const progressBar = useRef('');
 
 useEffect(() => {
 
-    audio.current.play();
+    playSong();
 
 }, [songIndex])
 
@@ -24,7 +24,7 @@ const onPrevSongHandler = () => {
         setSongIndex(props.audios.length - 1)
     }
 
-    playSong();
+    // playSong();
 }
 
 // Запуск следующей песни
@@ -35,7 +35,7 @@ const onNextSongHandler = () => {
         setSongIndex(0)
     }
 
-    playSong();
+    // playSong();
 }
 
 const playSong = () => {
