@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 
 let firstLoading = true;
+let songLoading = false;
 
 const AudioPlayer2 = (props) => {
 
@@ -12,19 +13,27 @@ const [playState, setPlayState] = useState(false);
 const audio = useRef('');
 const progressBar = useRef('');
 
+console.log(props.audios[songIndex].src)
+
 useEffect(() => {
 
     if(firstLoading) {
         firstLoading = false;
         return;
     }
+
+    // if(songLoading) {
+    //     return;
+    // }
     console.log('hello from useEffect')
 
-    let timer = setTimeout( function() {
-        playSong();
-    }, 1);
+    playSong();
+
+    // let timer = setTimeout( function() {
+    //     playSong();
+    // }, 1);
    
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
 
 }, [songIndex])
 
@@ -52,11 +61,12 @@ const onNextSongHandler = () => {
     // playSong();
 }
 
-const playSong = () => {
+const playSong = async () => {
     setPlayState(true);
 
-    audio.current.play();
-
+    // songLoading = true;
+    await audio.current.play();
+    // songLoading = false;
 
 }
 
