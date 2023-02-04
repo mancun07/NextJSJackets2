@@ -13,7 +13,7 @@ const [playState, setPlayState] = useState(false);
 const audio = useRef('');
 const progressBar = useRef('');
 
-console.log(props.audios[songIndex].src)
+console.log(songIndex)
 
 useEffect(() => {
 
@@ -22,9 +22,9 @@ useEffect(() => {
         return;
     }
 
-    // if(songLoading) {
-    //     return;
-    // }
+    if(songLoading) {
+        return;
+    }
     console.log('hello from useEffect')
 
     playSong();
@@ -64,9 +64,9 @@ const onNextSongHandler = () => {
 const playSong = async () => {
     setPlayState(true);
 
-    // songLoading = true;
+    songLoading = true;
     await audio.current.play();
-    // songLoading = false;
+    songLoading = false;
 
 }
 
