@@ -12,10 +12,10 @@ const NewsPage = (props) => {
   
 
     useEffect(() => {
-        document.querySelector('body').classList.add('mainImage');
+        document.body.classList.add('mainImage');
 
         return () => {
-        document.querySelector('body').classList.remove('mainImage');
+        document.body.classList.remove('mainImage');
         }
     }, [])
 

@@ -1,15 +1,11 @@
 .backdrop {
-    background: rgba(0,0,0,0.95);
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    background: rgba(0,0,0,0.9);
     position: fixed;
     z-index:100;
     top: 0;
     left:0;
     right:0;
     bottom:0;
-    opacity: 0.9;
     animation: anim1 .3s ease-in-out forwards;
 }
 
@@ -20,7 +16,7 @@
       }
     
       to {
-        opacity:0.9;
+        opacity:1;
         transform: scale(1);
       }
 }

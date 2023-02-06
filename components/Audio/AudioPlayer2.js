@@ -13,8 +13,6 @@ const [playState, setPlayState] = useState(false);
 const audio = useRef('');
 const progressBar = useRef('');
 
-console.log(songIndex)
-
 useEffect(() => {
 
     if(firstLoading) {
@@ -25,40 +23,27 @@ useEffect(() => {
     if(songLoading) {
         return;
     }
-    console.log('hello from useEffect')
 
     playSong();
-
-    // let timer = setTimeout( function() {
-    //     playSong();
-    // }, 1);
-   
-    // return () => clearTimeout(timer);
 
 }, [songIndex])
 
 // Запуск предыдущей песни
 const onPrevSongHandler = () => {
-    // audio.current.pause();
     if(songIndex > 0) {
         setSongIndex(prevState => prevState - 1)
     } else {
         setSongIndex(props.audios.length - 1)
     }
-
-    // playSong();
 }
 
 // Запуск следующей песни
 const onNextSongHandler = () => {
-    // audio.current.pause();
     if(songIndex < props.audios.length - 1) {
         setSongIndex(prevState => prevState + 1)
     } else {
         setSongIndex(0)
     }
-
-    // playSong();
 }
 
 const playSong = async () => {
