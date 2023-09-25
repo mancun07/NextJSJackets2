@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 import Head from 'next/head'
 
 const bandPhotos = [
-    {id: v4(), title: 'Band Photo1', src:'/about1.jpg'},
+    {id: v4(), title: 'Band Photo1', src:'/photo1.jpg'},
     {id: v4(), title: 'Band Photo2', src:'/about2.jpg'},
     {id: v4(), title: 'Band Photo3', src:'/about3.jpg'},
     {id: v4(), title: 'Band Photo4', src:'/about4.jpg'},
