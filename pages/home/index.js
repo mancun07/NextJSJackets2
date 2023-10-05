@@ -11,7 +11,7 @@ import { navbarActions } from '../../store/navbarSlice'
 
 
 const images = [
-  {id: '1', src:'/concert1.jpg', title:"concert"},
+  {id: '1', src:'/about/about1.jpg', title:"concert"},
   {id: '2', src:'/concert2.jpg', title:"concert" },
   {id: '3', src:'/concert3.jpg', title:"concert"},
 ]
