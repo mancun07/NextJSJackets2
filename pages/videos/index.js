@@ -17,9 +17,18 @@ const bandVideos = [
   {
     id: v4(),
     url:
+      "https://www.youtube.com/embed/JUvMobKfRBQ",
+    title: "Devil",
+    date: "10/07/2023",
+    venue: "St. Petersburg",
+  },
+
+  {
+    id: v4(),
+    url:
       "https://www.youtube.com/embed/0Wyx98yoe6c",
     title: "Wake Up",
-    date: "01/08/2022",
+    date: "01/08/2023",
     venue: "Fontanka Studio",
   },
     {
