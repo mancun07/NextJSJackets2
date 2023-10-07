@@ -13,7 +13,6 @@ const [playState, setPlayState] = useState(false);
 const audio = useRef('');
 const progressBar = useRef('');
 
-console.log(firstLoading)
 
 // useEffect(() => {
 
