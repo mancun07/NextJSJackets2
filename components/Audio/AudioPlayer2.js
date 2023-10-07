@@ -13,20 +13,22 @@ const [playState, setPlayState] = useState(false);
 const audio = useRef('');
 const progressBar = useRef('');
 
-useEffect(() => {
+console.log(firstLoading)
 
-    if(firstLoading) {
-        firstLoading = false;
-        return;
-    }
+// useEffect(() => {
 
-    if(songLoading) {
-        return;
-    }
+//     if(firstLoading) {
+//         firstLoading = false;
+//         return;
+//     }
 
-    playSong();
+//     if(songLoading) {
+//         return;
+//     }
 
-}, [songIndex])
+//     playSong();
+
+// }, [songIndex])
 
 // Запуск предыдущей песни
 const onPrevSongHandler = () => {
